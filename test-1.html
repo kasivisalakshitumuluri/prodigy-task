@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <link rel="stylesheet" href="styles.css">
+<style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #007BFF;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+nav.scrolled {
+    background: #0056b3;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+}
+
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+#section1 { background: #e3f2fd; }
+#section2 { background: #bbdefb; }
+#section3 { background: #90caf9; }
+#section4 { background: #64b5f6; }
+</style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">PRODIGY INFOTECH</div>
+        <ul>
+            <li><a href="#section1">01</a></li>
+            <li><a href="#section2">Comillas Negras</a></li>
+            <li><a href="#section3">Task-01</a></li>
+            <li><a href="#section4">Responsive Landing Page</a></li>
+        </ul>
+    </nav>
+
+    <section id="section1">
+        <h1>01</h1>
+        <p>Blue Gradient Square</p>
+    </section>
+    <section id="section2">
+        <h1>Comillas Negras</h1>
+        <p>Circle with gradient</p>
+    </section>
+    <section id="section3">
+        <h1>Task-01</h1>
+        <p>Blue Gradient Square</p>
+    </section>
+    <section id="section4">
+        <h1>Responsive Landing Page</h1>
+        <p>Circle with gradient</p>
+    </section>
+
+    <script src="script.js"></script>
+<script>
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+</script>
+</body>
+
+</html>
+
+
+
+
